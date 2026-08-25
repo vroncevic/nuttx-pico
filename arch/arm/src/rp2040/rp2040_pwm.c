@@ -359,9 +359,9 @@ int pwm_start(struct pwm_lowerhalf_s  * dev,
         }
     }
 #else
-  if (priv->duty != info[0].duty)
+  if (priv->duty != info->channels[0].duty)
     {
-      priv->duty = info[0].duty;
+      priv->duty = info->channels[0].duty;
     }
 #endif
 
