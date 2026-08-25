@@ -46,6 +46,7 @@
 #define MHZ                     1000000
 
 #define BOARD_XOSC_FREQ         (12 * MHZ)
+#define BOARD_XOSC_STARTUPDELAY 1
 #define BOARD_PLL_SYS_FREQ      (125 * MHZ)
 #define BOARD_PLL_USB_FREQ      (48 * MHZ)
 
@@ -66,6 +67,20 @@
 #define BOARD_NGPIOOUT          9
 #define BOARD_NGPIOIN           0
 #define BOARD_NGPIOINT          0
+
+/* LED definitions **********************************************************/
+
+#define BOARD_NLEDS        1
+#define BOARD_LED1_BIT     (1 << 0)
+
+#define LED_STARTED       0  /* NuttX has been started  OFF    */
+#define LED_HEAPALLOCATE  0  /* Heap has been allocated OFF    */
+#define LED_IRQSENABLED   0  /* Interrupts enabled      OFF    */
+#define LED_STACKCREATED  1  /* Idle stack created      ON     */
+#define LED_INIRQ         2  /* In an interrupt         N/C    */
+#define LED_SIGNAL        2  /* In a signal handler     N/C    */
+#define LED_ASSERTION     2  /* An assertion failed     N/C    */
+#define LED_PANIC         3  /* The system has crashed  FLASH  */
 
 /****************************************************************************
  * Public Types
